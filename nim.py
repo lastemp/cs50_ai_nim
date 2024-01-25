@@ -133,7 +133,8 @@ class NimAI():
         Q-value in `self.q`. If there are no available actions in
         `state`, return 0.
         """
-        available_actions = Nim.available_actions(state)
+        available_actions = list(
+            Nim.available_actions(state))  # Convert to a list
         if not available_actions:
             return 0
         return max(self.get_q_value(state, action) for action in available_actions)
