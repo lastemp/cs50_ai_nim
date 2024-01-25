@@ -153,7 +153,7 @@ class NimAI():
         If multiple actions have the same Q-value, any of those
         options is an acceptable return value.
         """
-        # available_actions = Nim.available_actions(state)
+
         available_actions = list(
             Nim.available_actions(state))  # Convert to a list
         if not available_actions:
